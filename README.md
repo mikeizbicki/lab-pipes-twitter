@@ -1,9 +1,12 @@
 # Pipe lab
 
-This lab will introduce you the Unix `|` (pronounced "pipe") command.
-You will use the command to do basic analysis of a large twitter dataset.
+This lab will introduce you the Unix `|` (pronounced "pipe") operator.
+You will use the pipe to do basic analysis of a large twitter dataset.
 
-## Task 0: Measuring the Dataset
+(There is no need to work with a partner on this lab,
+but you are of course encouraged to do so.)
+
+## Part 0: Measuring the Dataset
 
 The directory `/data/Twitter dataset` contains a large dataset of tweets.
 Run the following command to see the size of the dataset
@@ -21,7 +24,7 @@ we will practice techniques for working with these large datasets.
 > I do not use quotation marks.
 > `'/data/Twitter dataset'` is not the path, because the path does not have quotation marks inside of it.
 
-## Task 1: Counting the Files
+## Part 1: Counting the Files
 
 The first step in getting familiar with a new dataset is just to count how many files there are.
 We can easily do that by combining our knowledge of the `ls`, `wc`, and `|` commands:
@@ -59,7 +62,7 @@ $ ls '/data/Twitter dataset' | grep 'zip$' | wc -l
 Your command doesn't have to exactly match that, but you should get 1887 as your answer.
 -->
 
-## Task 2: Counting the Tweets
+## Part 2: Counting the Tweets
 
 Our next task is to count how many tweets the dataset has per day,
 and once again, we can easily do this with the shell.
@@ -145,7 +148,7 @@ we'll want them to have runtime $O(n)$.
 > They key idea is just that we don't want anything super-linear since that will result in absurd runtimes.
 > Big-O lets us express both of these ideas simultaneously in a compact notation.
 
-## Task 3: Inspecting Tweets
+## Part 3: Inspecting Tweets
 
 In the last task, we say how to extract an individual tweet using the `head` command:
 ```
@@ -188,7 +191,7 @@ which contains a dictionary describing the place the tweet was sent from.
 Inside this dictionary is a value `"full_name"` that contains the name of the city and state that the tweet was sent from.
 In this case, the tweet was sent from Houston, TX.
 
-## Task 4: `jq`
+## Part 4: `jq`
 
 The terminal has a useful command `jq` for extracting information out of JSON objects.
 (`j` is for JSON, and `q` is for query.)
@@ -232,7 +235,7 @@ $ unzip -p '/data/Twitter dataset/geoTwitter20-03-01.zip' | head -n10 | jq '.["p
 -->
 
 
-# Task 5: Interesting queries
+# Part 5: Interesting queries
 
 We're now ready to perform some rather interesting queries on our dataset.
 For example, the following query will list the text of all tweets sent from Claremont, CA on new years day 2020:
@@ -241,6 +244,7 @@ $ unzip -p '/data/Twitter dataset/geoTwitter20-01-01.zip' | grep "Claremont, CA"
 ```
 > **NOTE:**
 > You don't need to use the `jq` command to filter a tweet with the `grep` command because `grep` will check all of the fields in the JSON object.
+> (Make sure you understand why!)
 > The `jq` command is most useful for just changing how things get printed.
 > Technically, the command above will also catch tweets that contain the string `Claremont, CA` anywhere in their JSON object.
 > This could happen, for example, if a person tweets: "I'm in Claremont, CA right now."
@@ -261,7 +265,7 @@ so it's fine if the text appears inside of a hashtag.
 
 ## Submission
 
-Write a command that outputs all of the tweets sent from Claremont, CA on 12 March 2020 that mention the coronavirus.
+Write a command that outputs the text of all of the tweets sent from Claremont, CA on 12 March 2020 that mention the coronavirus.
 (This was the last day of in-person classes that semester.)
 Upload your command and it's output to sakai.
 
