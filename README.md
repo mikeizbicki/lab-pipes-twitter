@@ -150,7 +150,7 @@ we'll want them to have runtime $O(n)$.
 
 ## Part 3: Inspecting Tweets
 
-In the last task, we say how to extract an individual tweet using the `head` command:
+In the last task, we saw how to extract an individual tweet using the `head` command:
 ```
 $ unzip -p '/data/Twitter dataset/geoTwitter20-01-01.zip' | head -n1
 ```
