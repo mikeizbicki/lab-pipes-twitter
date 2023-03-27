@@ -267,7 +267,7 @@ so it's fine if the text appears inside of a hashtag.
 
 Write a command that outputs the text of all of the tweets sent from Claremont, CA on 12 March 2020 that mention the coronavirus.
 (This was the last day of in-person classes that semester.)
-Upload your command and it's output to sakai.
+Upload your command and its output to sakai.
 
 
 <!--
