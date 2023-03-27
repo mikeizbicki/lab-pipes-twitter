@@ -252,7 +252,7 @@ $ unzip -p '/data/Twitter dataset/geoTwitter20-01-01.zip' | grep "Claremont, CA"
 > but using this more correct regex wouldn't actually change the results of your answer in this case,
 > so I've opted for the simpler regex above.
 
-And the following command will count the number of times that "coronavirus was mentioned on 01 April 2020:
+And the following command will count the number of times that "coronavirus" was mentioned on 01 April 2020:
 ```
 $ unzip -p '/data/Twitter dataset/geoTwitter20-04-01.zip' | grep -i "coronavirus" | wc -l
 ```
