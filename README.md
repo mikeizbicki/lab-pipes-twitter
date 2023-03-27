@@ -32,7 +32,7 @@ We can easily do that by combining our knowledge of the `ls`, `wc`, and `|` comm
 $ ls '/data/Twitter dataset' | wc -l
 ```
 Importantly, however, not all of these files contain actual data.
-For example, there is a file `/data/Twitter datasets/readme.txt` that describes the format of the dataset.
+For example, there is a file `/data/Twitter dataset/readme.txt` that describes the format of the dataset.
 
 There is another `.txt` file in the dataset folder.
 How can we easily find the name of this file?
