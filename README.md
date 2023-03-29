@@ -278,7 +278,7 @@ Upload your command and it's output to sakai.
 > Technically, what's happening when you press CTRL-C is that your terminal is sending a special ASCII character to the shell called the [End of Text (ETX)](https://en.wikipedia.org/wiki/End-of-Text_character).
 > This is a non-printable character in the ASCII table that doesn't have a key on the keyboard,
 > but the CTRL key lets you send non-printable ASCII characters.
-> The shell running on the lambda server is never away that you've pressed the CTRL key.
+> The shell running on the lambda server is never aware that you've pressed the CTRL key.
 > This is called [caret notation](https://en.wikipedia.org/wiki/Caret_notation).
 > ```
 > The BST assignment totally sucks^h^h^h^h^hrules.
