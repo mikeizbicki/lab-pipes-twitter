@@ -203,17 +203,12 @@ $ unzip -p '/data/Twitter dataset/geoTwitter20-01-01.zip' | head -n1 | jq '.["pl
 ```
 You should see the values of the keys we discussed in the previous section above.
 
-> **ASIDE:**
-> The argument to `jq` is technically called a JsonPath.
-> JsonPath is a standard for extracting information from JSON objects,
-> and like all modern standards,
-> the details are stored in a git repo: <https://github.com/json-path/JsonPath>.
+> **Note:**
 > The documentation for the `jq` command is [also hosted on github](https://stedolan.github.io/jq/tutorial/),
-> this time in the form of a standard HTML webpage hosted using [github pages](https://pages.github.com/).
-> (For those of you who took CS40 with me, recall that github pages was how you created your webpages for that class.)
-> The JsonPath syntax can perform incredibly complex queries,
+
+> The syntax can perform incredibly complex queries,
 > but you don't need to know the details of this syntax for this class.
-> Hopefully, the simple queries above are relatively easy to understand, though.
+> Hopefully, the simple queries above are relatively easy to understand.
 
 Lets see one more example using the `jq` command to process multiple tweets at once.
 Recall that the `head -n1` command outputs only the first line of its input and discards everything else.
