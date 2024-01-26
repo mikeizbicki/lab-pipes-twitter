@@ -32,7 +32,7 @@ We can easily do that by combining our knowledge of the `ls`, `wc`, and `|` comm
 $ ls '/data/Twitter dataset' | wc -l
 ```
 Importantly, however, not all of these files contain actual data.
-For example, there is a file `/data/Twitter datasets/readme.txt` that describes the format of the dataset.
+For example, there is a file `/data/Twitter dataset/readme.txt` that describes the format of the dataset.
 
 There is another `.txt` file in the dataset folder.
 How can we easily find the name of this file?
@@ -150,7 +150,7 @@ we'll want them to have runtime $O(n)$.
 
 ## Part 3: Inspecting Tweets
 
-In the last task, we say how to extract an individual tweet using the `head` command:
+In the last task, we saw how to extract an individual tweet using the `head` command:
 ```
 $ unzip -p '/data/Twitter dataset/geoTwitter20-01-01.zip' | head -n1
 ```
@@ -247,7 +247,7 @@ $ unzip -p '/data/Twitter dataset/geoTwitter20-01-01.zip' | grep "Claremont, CA"
 > but using this more correct regex wouldn't actually change the results of your answer in this case,
 > so I've opted for the simpler regex above.
 
-And the following command will count the number of times that "coronavirus was mentioned on 01 April 2020:
+And the following command will count the number of times that "coronavirus" was mentioned on 01 April 2020:
 ```
 $ unzip -p '/data/Twitter dataset/geoTwitter20-04-01.zip' | grep -i "coronavirus" | wc -l
 ```
@@ -262,7 +262,7 @@ so it's fine if the text appears inside of a hashtag.
 
 Write a command that outputs the text of all of the tweets sent from Claremont, CA on 12 March 2020 that mention the coronavirus.
 (This was the last day of in-person classes that semester.)
-Upload your command and it's output to sakai.
+Upload your command and its output to sakai.
 
 
 <!--
