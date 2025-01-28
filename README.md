@@ -53,7 +53,7 @@ Our next task is to discover how many days worth of data the dataset contains.
 Once again, we can answer this question easily with our shell commands.
 In this case, we'll need to use `grep` to filter the output of `ls` to keep only files that end in `zip`, then use `wc` to count the results.
 
-**Problem 1:**
+**Exercise 1:**
 Write a one line shell command that returns the number of days worth of data (i.e. the number of zip files) in the twitter dataset.
 There is no need to turn anything in for this problem,
 and you can find a solution in the comments of this README.
@@ -125,7 +125,7 @@ and you can press CTRL-C to end it early.
 > and the shell has a built-in command `time` for doing this.
 > If you re-write the command above as
 > ```
-> $ time (unzip -p '/data/Twitter dataset/geoTwitter20-01-01.zip' | wc -l)
+> $ time unzip -p '/data/Twitter dataset/geoTwitter20-01-01.zip' | wc -l
 > ```
 > then the terminal will print the runtime for you.
 
@@ -205,12 +205,12 @@ You should see the values of the keys we discussed in the previous section above
 
 > **Note:**
 > The documentation for the `jq` command is [also hosted on github](https://stedolan.github.io/jq/tutorial/),
-
+>
 > The syntax can perform incredibly complex queries,
 > but you don't need to know the details of this syntax for this class.
 > Hopefully, the simple queries above are relatively easy to understand.
 
-Lets see one more example using the `jq` command to process multiple tweets at once.
+Let's see one more example using the `jq` command to process multiple tweets at once.
 Recall that the `head -n1` command outputs only the first line of its input and discards everything else.
 We can change the number `1` to a larger number to get more lines,
 and the `jq` command will then process each of those lines individually.
@@ -221,7 +221,7 @@ $ unzip -p '/data/Twitter dataset/geoTwitter20-01-01.zip' | head -n20 | jq '.["t
 Notice that many of these tweets are in non-English languages.
 (Only about 30% of tweets are English.)
 
-**Problem:**
+**Exercise 2:**
 Write a one line shell command that returns the name of the location that the first 10 tweets were sent from on 1 April 2020.
 There is no need to turn anything in for this problem,
 and you can find a solution in the comments of this README.
@@ -239,7 +239,7 @@ $ unzip -p '/data/Twitter dataset/geoTwitter20-01-01.zip' | grep "Claremont, CA"
 ```
 > **NOTE:**
 > You don't need to use the `jq` command to filter a tweet with the `grep` command because `grep` will check all of the fields in the JSON object.
-> (Make sure you understand why!)
+> (This should be "obvious", and make sure you understand why!)
 > The `jq` command is most useful for just changing how things get printed.
 > Technically, the command above will also catch tweets that contain the string `Claremont, CA` anywhere in their JSON object.
 > This could happen, for example, if a person tweets: "I'm in Claremont, CA right now."
