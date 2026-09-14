@@ -6,6 +6,8 @@ You will use the pipe to do basic analysis of a large twitter dataset.
 (There is no need to work with a partner on this lab,
 but you are of course encouraged to do so.)
 
+<img src=img/meme.jpg width=400px />
+
 ## Part 0: Measuring the Dataset
 
 The directory `/data/Twitter dataset` contains a large dataset of tweets.
